@@ -78,7 +78,7 @@ function draw() {
     
     ground.velocityX = -(6 + 3*score/100);
 
-    score = score + Math.round(getFrameRate() / 60);
+    score = score + Math.round(frameRate() / 60.3);
 
     if (keyDown("space") && (trex.y === 161.75||trex.y === 161.5 || trex.y === 162.3||trex.y === 162.8||trex.y === 162)) {
       trex.velocityY = -12;
@@ -184,6 +184,7 @@ function spawnObstacles() {
     //assign scale and lifetime to the obstacle           
     obstacle.scale = 0.5;
     obstacle.lifetime = 300;
+    
     //add each obstacle to the group
     obstaclesGroup.add(obstacle);
   }
